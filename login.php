@@ -24,7 +24,7 @@ include "koneksi.php";
                                     <div class="card-header"><h3 class="text-center font-weight-light my-4">Login Perpustakaan Digital</h3></div>
                                     <div class="card-body">
                                         <?php
-                                        if(isset($_POST['user'])) {
+                                        if(isset($_POST['login'])) {
                                             $username = $_POST['username'];
                                             $password = md5($_POST['password']);
                                             
@@ -40,7 +40,7 @@ include "koneksi.php";
                                         ?>
                                         <form method="post">
                                             <div class="form-floating mb-3">
-                                                <input class="form-control" id="inputEmail" type="username" name="username" placeholder="Enter username" />
+                                                <input class="form-control" id="inputEmail" type="text" name="username" placeholder="Enter username" />
                                                 <label for="inputEmail">Username</label>
                                             </div>
                                             <div class="form-floating mb-3">
