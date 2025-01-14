@@ -12,7 +12,7 @@
                                         Total Kategori
                                     </div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <a class="small text-white stretched-link" href="#">Selengkapnya</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
@@ -26,7 +26,7 @@
                                         Total Buku
                                     </div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <a class="small text-white stretched-link" href="#">Selengkapnya</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
@@ -40,7 +40,7 @@
                                         Total Ulasan
                                     </div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <a class="small text-white stretched-link" href="#">Selengkapnya</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
@@ -54,9 +54,31 @@
                                         Total User
                                     </div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <a class="small text-white stretched-link" href="#">Selengkapnya</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <td width="200">Nama</td>
+                                        <td width="1">:</td>
+                                        <td><?php echo $_SESSION['user']['nama']; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="200">Level</td>
+                                        <td width="1">:</td>
+                                        <td><?php echo $_SESSION['user']['level']; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="200">Tanggal Login</td>
+                                        <td width="1">:</td>
+                                        <td><?php echo date('d-m-y'); ?></td>
+                                    </tr>
+                                </table>
                             </div>
                         </div>
