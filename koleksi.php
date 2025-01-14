@@ -15,7 +15,7 @@
         </thead>
         <?php
         $i = 1;
-        $query = mysqli_query($koneksi, "SELECT * FROM koleksi LEFT JOIN user on user.id_user = koleksi.id_user LEFT JOIN buku on buku.id_buku = koleksi.id_buku");
+        $query = mysqli_query($koneksi, "SELECT * FROM peminjaman LEFT JOIN user on user.id_user = peminjaman.id_user LEFT JOIN buku on buku.id_buku = peminjaman.id_buku");
         while($data = mysqli_fetch_array($query)) {
             ?>
                 <tr>
@@ -23,8 +23,8 @@
                     <td><?php echo $data['nama']; ?></td>
                     <td><?php echo $data['judul']; ?></td>
                     <td>
-                    <a href="?page=koleksi_ubah&&id=<?php echo $data['id_koleksi']; ?>" class="btn btn-info">Ubah</a>
-                    <a onclick="return confirm('Apakah anda yakin menghapus data ini?')" href="?page=koleksi_hapus&&id=<?php echo $data['id_koleksi']; ?>" class="btn btn-danger">Hapus</a>
+                    <a href="?page=koleksi_ubah&&id=<?php echo $data['id_peminjaman']; ?>" class="btn btn-info">Ubah</a>
+                    <a onclick="return confirm('Apakah anda yakin menghapus data ini?')" href="?page=koleksi_hapus&&id=<?php echo $data['id_peminjaman']; ?>" class="btn btn-danger">Hapus</a>
                     </td>
 
                 </tr>

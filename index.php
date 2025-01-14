@@ -58,6 +58,10 @@ if(!isset($_SESSION['user'])) {
                             <?php
                             if ($_SESSION['user']['level'] != 'peminjam') {
                             ?>
+                            <a class="nav-link" href="?page=user">
+                                <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
+                                User
+                            </a>
                             <a class="nav-link" href="?page=kategori">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 Kategori
