@@ -1,4 +1,4 @@
-<h1 class="mt-4">Laporan Peminjaman Buku</h1>
+<h1 class="mt-4">Peminjaman Buku</h1>
 <div class="card">
     <div class="card-body">
 <div class="row">
