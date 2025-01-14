@@ -1,8 +1,18 @@
+<?php
+    if ($_SESSION['user']['level'] != 'peminjam') {
+?>
 <h1 class="mt-4">Dashboard</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item active">Dashboard</li>
                         </ol>
+                        <?php
+                        }
+                        ?>
                         <div class="row">
+                        <?php
+                            if ($_SESSION['user']['level'] != 'peminjam') {
+                            ?>
+
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-primary text-white mb-4">
                                     <div class="card-body">
@@ -12,7 +22,7 @@
                                         Total Kategori
                                     </div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">Selengkapnya</a>
+                                        <a class="small text-white stretched-link" href="?page=kategori">Selengkapnya</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
@@ -26,7 +36,7 @@
                                         Total Buku
                                     </div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">Selengkapnya</a>
+                                        <a class="small text-white stretched-link" href="?page=buku">Selengkapnya</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
@@ -40,7 +50,7 @@
                                         Total Ulasan
                                     </div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">Selengkapnya</a>
+                                        <a class="small text-white stretched-link" href="?page=ulasan">Selengkapnya</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
@@ -54,14 +64,18 @@
                                         Total User
                                     </div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">Selengkapnya</a>
+                                        <!-- <a class="small text-white stretched-link" href="?page=user">Selengkapnya</a> -->
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
                             </div>
+                            <?php
+                            }
+                            ?>
+
                         </div>
 
-                        <div class="card">
+                        <!-- <div class="card">
                             <div class="card-body">
                                 <table class="table table-bordered">
                                     <tr>
@@ -81,4 +95,4 @@
                                     </tr>
                                 </table>
                             </div>
-                        </div>
+                        </div> -->
