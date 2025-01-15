@@ -75,11 +75,11 @@ include "koneksi.php";
                                             
                                             <div class="form-floating mb-3">
                                                 <input class="form-control" type="username" required name="username" placeholder="Masukkan Username" />
-                                                <label>Username</label>
+                                                <label>Nama Pengguna</label>
                                             </div>
                                             <div class="form-floating mb-3">
                                                 <input class="form-control" id="inputPassword" required name="password" type="password" placeholder="Masukkan Password" />
-                                                <label for="inputPassword">Password</label>
+                                                <label for="inputPassword">Sandi</label>
                                             </div>
                                             <div class="form-floating mb-3">
                                                 <select name="level" required class="form-select">

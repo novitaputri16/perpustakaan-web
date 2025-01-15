@@ -1,3 +1,7 @@
+<?php 
+include("koneksi.php");
+?>
+
 <h1 class="mt-4">Laporan Peminjaman Buku</h1>
 <div class="card">
     <div class="card-body">
