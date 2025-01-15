@@ -8,7 +8,7 @@
             if(isset($_POST['submit'])) {
                 $nama = $_POST['nama'];
                 $username = $_POST['username'];
-                $password = $_POST['password'];
+                $password = md5($_POST['password']);
                 $email = $_POST['email'];
                 $alamat = $_POST['alamat'];
                 $level = $_POST['level'];
@@ -46,7 +46,6 @@
                 <div class="col-md-8">
                     <select name="level" class="form-select">
                         <option value="petugas">Petugas</option>
-                        <option value="admin">Admin</option>
                         <option value="peminjam">Peminjam</option>
                     </select>
                 </div>
