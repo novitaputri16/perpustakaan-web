@@ -2,12 +2,12 @@
 include("koneksi.php");
 ?>
 
-<h1 class="mt-4">Laporan Peminjaman Buku</h1>
+<h1 class="mt-4">Peminjaman Buku</h1>
 <div class="card">
     <div class="card-body">
 <div class="row">
     <div class="col-md-12">
-        <a href="?page=peminjaman_tambah" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah Peminjamamn</a>
+        <a href="?page=peminjaman_tambah" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah Peminjaman</a>
         <table class="table table-bordered" id="datatablesSimple">
         <thead>
             <tr>

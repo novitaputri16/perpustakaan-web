@@ -134,14 +134,14 @@ if(!isset($_SESSION['user'])) {
             <!-- Navbar-->
             <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <a class="" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <!-- <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="#!">Settings</a></li>
                         <li><a class="dropdown-item" href="#!">Activity Log</a></li>
                         <li><hr class="dropdown-divider" /></li>
                         <li><a class="dropdown-item" href="#!">Logout</a></li>
                     </ul>
-                </li>
+                </li> -->
             </ul>
         </nav>
         <div id="layoutSidenav">
@@ -158,6 +158,10 @@ if(!isset($_SESSION['user'])) {
                             <?php
                             if ($_SESSION['user']['level'] != 'peminjam') {
                             ?>
+                            <a class="nav-link" href="?page=user">
+                                <div class="sb-nav-link-icon"><i class="fas fa-user "></i></div>
+                                User
+                            </a>
                             <a class="nav-link" href="?page=kategori">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 Kategori
@@ -172,6 +176,10 @@ if(!isset($_SESSION['user'])) {
                             <a class="nav-link" href="?page=peminjaman">
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                                 Peminjaman
+                            </a>
+                            <a class="nav-link" href="?page=koleksi">
+                                <div class="sb-nav-link-icon"><i class="fas fa-bookmark"></i></div>
+                                Koleksi Buku
                             </a>
                             <?php
                             }
@@ -190,16 +198,16 @@ if(!isset($_SESSION['user'])) {
                             <?php
                             }
                             ?>
-                            <a class="nav-link" href="logout.php">
+                            <a onclick="return confirm('Apakah anda yakin ingin keluar?')" class="nav-link" href="logout.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-power-off"></i></div>
                                 Logout
                             </a>
                         </div>
                     </div>
-                    <!-- <div class="sb-sidenav-footer">
-                        <div class="small">Logged in as:</div>
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Login sebagai:</div>
                         <?php echo $_SESSION['user']['nama']; ?>
-                    </div> -->
+                    </div>
                 </nav>
             </div>
             <div id="layoutSidenav_content">

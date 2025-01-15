@@ -38,13 +38,11 @@ include "koneksi.php";
                                             $nama = $_POST['nama'];
                                             $email = $_POST['email'];
                                             $alamat = $_POST['alamat'];
-                                            $no_telepon = $_POST['no_telepon'];
                                             $username = $_POST['username'];
                                             $level = $_POST['level'];
                                             $password = md5($_POST['password']);
 
-                                            $insert = mysqli_query($koneksi, "INSERT INTO user(nama,email,alamat,no_telepon,username,password,level) VALUES('$nama','$email','$alamat','$no_telpon','$username','$password','$level')");
-                                            $insert = mysqli_query($koneksi, "INSERT INTO user (nama, email, alamat, no_telepon, username, password, level) VALUES ('$nama', '$email', '$alamat', '$no_telpon', '$username', '$password', '$level')");
+                                            $insert = mysqli_query($koneksi, "INSERT INTO user(nama,email,alamat,username,password,level) VALUES('$nama','$email','$alamat','$username','$password','$level')");
 
                                             if ($insert) {
                                                 echo '<script>alert("Selamat, register berhasil. Silahkan Login"); location.href="login.php"</script>';
@@ -65,10 +63,6 @@ include "koneksi.php";
                                                 <label>Email</label>
                                             </div>
                                             <div class="form-floating mb-3">
-                                                <input class="form-control" type="number" required name="no_telepon" placeholder="Masukkan No. Telepon" />
-                                                <label>No. Telepon</label>
-                                            </div>
-                                            <div class="form-floating mb-3">
                                                 <input class="form-control" type="text" required name="alamat" placeholder="Masukkan Alamat" />
                                                 <label>Alamat</label>
                                             </div>
@@ -82,10 +76,7 @@ include "koneksi.php";
                                                 <label for="inputPassword">Sandi</label>
                                             </div>
                                             <div class="form-floating mb-3">
-                                                <select name="level" required class="form-select">
-                                                    <option value="peminjam">Peminjam</option>
-                                                    <option value="admin">Admin</option>
-                                                </select>
+                                                <input class="form-control" id="inputLevel" name="level" type="password" placeholder="" />
                                                 <label>Level</label>
                                             </div>
                                             <div class="d-flex align-items-center justify-content-center mt-4 mb-5">                                            <button data-mdb-button-init data-mdb-ripple-init
