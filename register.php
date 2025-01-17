@@ -76,7 +76,7 @@ include "koneksi.php";
                                                 <label for="inputPassword">Sandi</label>
                                             </div>
                                             <div class="form-floating mb-3">
-                                                <input class="form-control" id="inputLevel" name="level" type="password" placeholder="" />
+                                                <input class="form-control" id="inputLevel" name="level" readonly value="Peminjam" placeholder="" />
                                                 <label>Level</label>
                                             </div>
                                             <div class="d-flex align-items-center justify-content-center mt-4 mb-5">                                            <button data-mdb-button-init data-mdb-ripple-init

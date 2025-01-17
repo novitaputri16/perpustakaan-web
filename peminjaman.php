@@ -1,7 +1,3 @@
-<?php 
-include("koneksi.php");
-?>
-
 <h1 class="mt-4">Peminjaman Buku</h1>
 <div class="card">
     <div class="card-body">
@@ -42,10 +38,10 @@ include("koneksi.php");
                         
                         ?>
                     <a href="?page=peminjaman_ubah&&id=<?php echo $data['id_peminjaman']; ?>" class="btn btn-info">Ubah</a>
-                    <a onclick="return confirm('Apakah anda yakin menghapus data ini?')" href="?page=peminjaman_hapus&&id=<?php echo $data['id_peminjaman']; ?>" class="btn btn-danger">Hapus</a>
-                        <?php
+                    <?php
                         }
                         ?>
+                    <a onclick="return confirm('Apakah anda yakin menghapus data ini?')" href="?page=peminjaman_hapus&&id=<?php echo $data['id_peminjaman']; ?>" class="btn btn-danger">Hapus</a>
                     </td>
                 </tr>
             <?php
