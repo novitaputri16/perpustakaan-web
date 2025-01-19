@@ -12,6 +12,7 @@
                 <th>Buku</th>
                 <th>Tanggal Peminjaman</th>
                 <th>Tanggal Pengembalian</th>
+                <th>Verikvikasi</th>
                 <th>Status Peminjaman</th>
                 <th>Aksi</th>
             </tr>
@@ -27,7 +28,11 @@
                     <td><?php echo $data['judul']; ?></td>
                     <td><?php echo $data['tanggal_peminjaman']; ?></td>
                     <td><?php echo $data['tanggal_pengembalian']; ?></td>
+                    <td></td>
                     <td><?php echo $data['status_peminjaman']; ?></td>
+                    <td>
+                        <a href="#" class="btn btn-success">Verivikasi</a>
+                    </td>
                 </tr>
             <?php
         }

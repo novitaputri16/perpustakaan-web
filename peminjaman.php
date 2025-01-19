@@ -3,7 +3,7 @@
     <div class="card-body">
 <div class="row">
     <div class="col-md-12">
-        <a href="?page=peminjaman_tambah" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah Peminjaman</a>
+        <!-- <a href="?page=peminjaman_tambah" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah Peminjaman</a> -->
         <table class="table table-bordered" id="datatablesSimple">
         <thead>
             <tr>
@@ -13,7 +13,7 @@
                 <th>Tanggal Peminjaman</th>
                 <th>Tanggal Pengembalian</th>
                 <th>Status Peminjaman</th>
-                <th>Aksi</th>
+                <!-- <th>Aksi</th> -->
             </tr>
         </thead>
         <?php
@@ -31,17 +31,17 @@
                     <td><?php echo $data['tanggal_peminjaman']; ?></td>
                     <td><?php echo $data['tanggal_pengembalian']; ?></td>
                     <td><?php echo $data['status_peminjaman']; ?></td>
-                    <td>
+                    <!-- <td>
                         <?php
                         if($data['status_peminjaman'] != 'dikembalikan') {
 
                         
                         ?>
-                    <a href="?page=peminjaman_ubah&&id=<?php echo $data['id_peminjaman']; ?>" class="btn btn-info">Ubah</a>
+                     <a href="?page=peminjaman_ubah&&id=<?php echo $data['id_peminjaman']; ?>" class="btn btn-info">Ubah</a> -->
                     <?php
                         }
                         ?>
-                    <a onclick="return confirm('Apakah anda yakin menghapus data ini?')" href="?page=peminjaman_hapus&&id=<?php echo $data['id_peminjaman']; ?>" class="btn btn-danger">Hapus</a>
+                    <!-- <a onclick="return confirm('Apakah anda yakin menghapus data ini?')" href="?page=peminjaman_hapus&&id=<?php echo $data['id_peminjaman']; ?>" class="btn btn-danger">Hapus</a> -->
                     </td>
                 </tr>
             <?php
