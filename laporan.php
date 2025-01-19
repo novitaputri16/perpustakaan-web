@@ -12,7 +12,7 @@
                 <th>Buku</th>
                 <th>Tanggal Peminjaman</th>
                 <th>Tanggal Pengembalian</th>
-                <th>Verikvikasi</th>
+                <th>Pengembalian</th>
                 <th>Status Peminjaman</th>
             </tr>
         </thead>
@@ -27,7 +27,15 @@
                     <td><?php echo $data['judul']; ?></td>
                     <td><?php echo $data['tanggal_peminjaman']; ?></td>
                     <td><?php echo $data['tanggal_pengembalian']; ?></td>
-                    <td></td>
+                    <td>
+                    <?php
+                        if($data['status_peminjaman'] != 'dipinjam') {
+                    ?>
+                    <?php echo date('d-m-y'); ?>
+                    <?php
+                        }
+                        ?>
+                    </td>
                     <td><?php echo $data['status_peminjaman']; ?></td>
                 </tr>
             <?php

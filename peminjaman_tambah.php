@@ -25,7 +25,7 @@
                 <div class="col-md-8">
                     <select name="id_user" class="form-select">
                         <?php
-                        $us = mysqli_query($koneksi, "SELECT * FROM user");
+                        $us = mysqli_query($koneksi, "SELECT * FROM user WHERE level='peminjam'");
                         while($user = mysqli_fetch_array($us)) {
                             ?>
                             <option value="<?php echo $user['id_user']; ?>"><?php echo $user['nama']; ?></option>
