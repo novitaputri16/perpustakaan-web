@@ -125,24 +125,24 @@ if(!isset($_SESSION['user'])) {
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
-            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+            <!-- <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
                 <div class="input-group">
                     <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
                     <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
                 </div>
-            </form>
+            </form> -->
             <!-- Navbar-->
-            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+            <!-- <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
                 <li class="nav-item dropdown">
                     <a class="" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
-                    <!-- <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="#!">Settings</a></li>
                         <li><a class="dropdown-item" href="#!">Activity Log</a></li>
                         <li><hr class="dropdown-divider" /></li>
                         <li><a class="dropdown-item" href="#!">Logout</a></li>
                     </ul>
-                </li> -->
-            </ul>
+                </li>
+            </ul> -->
         </nav>
         <div id="layoutSidenav">
             <div id="layoutSidenav_nav">
@@ -166,13 +166,13 @@ if(!isset($_SESSION['user'])) {
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 Kategori
                             </a>
+                            <?php
+                            }else {
+                                ?>
                             <a class="nav-link" href="?page=buku">
                                 <div class="sb-nav-link-icon"><i class="fas fa-book"></i></div>
                                 Buku
                             </a>
-                            <?php
-                            }else {
-                                ?>
                             <a class="nav-link" href="?page=peminjaman">
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                                 Peminjaman
@@ -230,7 +230,7 @@ if(!isset($_SESSION['user'])) {
     LEFT JOIN buku ON buku.id_buku = peminjaman.id_buku 
     WHERE peminjaman.id_user = '" . $_SESSION['user']['id_user'] . "'") or die(mysqli_error($koneksi));
     ?>
-        <div class="row">
+        <!-- <div class="row">
         <?php while($data = mysqli_fetch_array($query)) { ?>
             <div class="col-md-3 mb-4">
                 <div class="card-sl">
@@ -239,7 +239,7 @@ if(!isset($_SESSION['user'])) {
                             src="https://images.pexels.com/photos/1149831/pexels-photo-1149831.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
                     </div>
 
-                    <a class="card-action" href="#"><i class="fa fa-bookmark"></i></a>
+                    <a class="card-action" href=""><i class="fa fa-bookmark"></i></a>
                     <div class="card-heading">
                     <?php echo $data['judul']; ?>
                     </div>
@@ -250,11 +250,11 @@ if(!isset($_SESSION['user'])) {
                     <?php echo $data['deskripsi']; ?>  
                     </div>
                     <div>
-                    <a href="#" class="card-button">Detail Buku</a>
+                    <a href="?page=detail" class="card-button">Detail Buku</a>
                     </div>
                 </div>
                 <?php } ?>
-            </div>
+            </div> -->
                 </main>
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">

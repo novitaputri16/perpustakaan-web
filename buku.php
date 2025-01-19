@@ -3,8 +3,13 @@
     <div class="card-body">
 <div class="row">
     <div class="col-md-12">
-        
+    <?php
+        if ($_SESSION['user']['level'] != 'peminjam') {
+    ?>
         <a href="?page=buku_tambah" class="btn btn-primary">+ Tambah Data</a>
+        <?php
+            }
+        ?>
         <table class="table table-bordered" id="datatablesSimple">
         <thead>
             <tr>
@@ -32,8 +37,16 @@
                     <td><?php echo $data['tahun_terbit']; ?></td>
                     <td><?php echo $data['deskripsi']; ?></td>
                     <td>
+                    <?php
+                        if ($_SESSION['user']['level'] != 'peminjam') {
+                    ?>
                     <a href="?page=buku_ubah&&id=<?php echo $data['id_buku']; ?>" class="btn btn-info">Ubah</a>
                     <a onclick="return confirm('Apakah anda yakin menghapus data ini?')" href="?page=buku_hapus&&id=<?php echo $data['id_kategori']; ?>" class="btn btn-danger">Hapus</a>
+                    <?php
+                        }
+                    ?>
+                    <a href="?page=buku_ubah&&id=<?php echo $data['id_buku']; ?>" class="btn btn-info">Pinjam</a>
+
                     </td>
                 </tr>
             <?php
