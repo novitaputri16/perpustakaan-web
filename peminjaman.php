@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+=======
+>>>>>>> 33a4d9ca0df6d4e318bdb24ce48f41b5dae644de
 <h1 class="mt-4">Peminjaman Buku</h1>
 <div class="card">
     <div class="card-body">
