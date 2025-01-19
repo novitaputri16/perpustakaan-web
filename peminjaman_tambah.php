@@ -7,7 +7,7 @@
             <?php
             if(isset($_POST['submit'])) {
                 $id_buku = $_POST['id_buku'];
-                $id_user = $_SESSION['user']['id_user'];
+                $id_user = $_POST['id_user'];
                 $tanggal_peminjaman = $_POST['tanggal_peminjaman'];
                 $tanggal_pengembalian = $_POST['tanggal_pengembalian'];
                 $status_peminjaman = $_POST['status_peminjaman'];
@@ -20,6 +20,21 @@
                 }
             }
             ?>
+            <div class="row md-3">
+                <div class="col-md-3">User</div>
+                <div class="col-md-8">
+                    <select name="id_user" class="form-select">
+                        <?php
+                        $us = mysqli_query($koneksi, "SELECT * FROM user");
+                        while($user = mysqli_fetch_array($us)) {
+                            ?>
+                            <option value="<?php echo $user['id_user']; ?>"><?php echo $user['nama']; ?></option>
+                            <?php
+                        }
+                        ?>
+                    </select>
+                </div>
+            </div>
             <div class="row md-3">
                 <div class="col-md-3">Buku</div>
                 <div class="col-md-8">

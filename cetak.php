@@ -8,7 +8,6 @@
                 <th>Tanggal Peminjaman</th>
                 <th>Tanggal Pengembalian</th>
                 <th>Status Peminjaman</th>
-                <th>Aksi</th>
             </tr>
         </thead>
         <?php

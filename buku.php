@@ -1,4 +1,4 @@
-<h1 class="mt-4">Buku</h1>
+<h1 class="mt-4">Daftar Buku</h1>
 <div class="card">
     <div class="card-body">
 <div class="row">
@@ -20,7 +20,13 @@
                 <th>Penerbit</th>
                 <th>Tahun Terbit</th>
                 <th>Deskripsi</th>
+                <?php
+                if ($_SESSION['user']['level'] != 'peminjam') {
+                ?>
                 <th>Aksi</th>
+                <?php
+                }
+                ?>
             </tr>
         </thead>
         <?php
@@ -36,18 +42,17 @@
                     <td><?php echo $data['penerbit']; ?></td>
                     <td><?php echo $data['tahun_terbit']; ?></td>
                     <td><?php echo $data['deskripsi']; ?></td>
-                    <td>
                     <?php
                         if ($_SESSION['user']['level'] != 'peminjam') {
                     ?>
+                    <td>
                     <a href="?page=buku_ubah&&id=<?php echo $data['id_buku']; ?>" class="btn btn-info">Ubah</a>
                     <a onclick="return confirm('Apakah anda yakin menghapus data ini?')" href="?page=buku_hapus&&id=<?php echo $data['id_kategori']; ?>" class="btn btn-danger">Hapus</a>
+                    </td>
                     <?php
                         }
                     ?>
-                    <a href="?page=buku_ubah&&id=<?php echo $data['id_buku']; ?>" class="btn btn-info">Pinjam</a>
 
-                    </td>
                 </tr>
             <?php
         }

@@ -14,7 +14,6 @@
                 <th>Tanggal Pengembalian</th>
                 <th>Verikvikasi</th>
                 <th>Status Peminjaman</th>
-                <th>Aksi</th>
             </tr>
         </thead>
         <?php
@@ -30,9 +29,6 @@
                     <td><?php echo $data['tanggal_pengembalian']; ?></td>
                     <td></td>
                     <td><?php echo $data['status_peminjaman']; ?></td>
-                    <td>
-                        <a href="#" class="btn btn-success">Verivikasi</a>
-                    </td>
                 </tr>
             <?php
         }
