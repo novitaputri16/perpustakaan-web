@@ -39,6 +39,9 @@
             while($data = mysqli_fetch_array($query)) {
             ?>
                 <tr>
+                <?php
+                        if($data['status_peminjaman'] != 'dikembalikan') {
+                    ?>
                     <td><?php echo $i++; ?></td>
                     <td><?php echo $data['nama']; ?></td>
                     <td><?php echo $data['judul']; ?></td>
@@ -55,6 +58,9 @@
                     <?php
                     }
                     ?>
+                    <?php
+                        }
+                        ?>
                 </tr>
             <?php
         }
